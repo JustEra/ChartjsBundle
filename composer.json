@@ -1,6 +1,5 @@
 {
   "name": "aldaflux/chartjs-bundle",
-  "version":"1.0.1",
   "type": "symfony-bundle",
   "description": "Chartjs integration in Symfony5",
   "keywords": ["Chartjs"],
