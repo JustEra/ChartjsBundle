@@ -17,7 +17,7 @@
  "minimum-stability": "stable",
  "prefer-stable":true,
  "require": {
-     
+        "symfony/framework-bundle": "^4.2|^5.0",
        "doctrine/collections": ">=1.0"
   },
    "extra": {
