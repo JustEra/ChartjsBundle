@@ -22,13 +22,8 @@
   },
     "autoload": {
         "psr-4": {
-            "Aldaflux\\Bundle\\ChartjsBundle\\": "src/"
+            "Aldaflux\\ChartjsBundle\\": ""
         }
     },
 
-   "extra": {
-        "branch-alias": {
-            "dev-master": "1.0.x-dev"
-        }
-    }
 }
