@@ -1,0 +1,27 @@
+parameters:
+  chartjs.global.animation: chartjs.animation
+  chartjs.global.layout: chartjs.layout
+  chartjs.global.legend: chartjs.legend
+  chartjs.global.title: chartjs.title
+
+services:
+  chartjs.twig_extension:
+       class:  Aldaflux\ChartjsBundle\Twig\chartjsExtension
+       arguments: ['@service_container']
+       public: false
+       tags:
+         - { name: twig.extension }
+#controllers:
+#    resource: Aldaflux\ChartjsBundle\Twig\chartjsExtension
+#    type: annotation
+
+  chartjs.controller:
+       class: Aldaflux\ChartjsBundle\Controller\ChartjsController
+       public: true
+       arguments: ['@service_container']
+#       tags: ['controller.service_arguments']
+       tags: ['container.service_subscriber']
+       calls:
+           - ['setContainer', ['@Psr\Container\ContainerInterface']]
+#           - [setContainer, ["@service_container"]]
+       
