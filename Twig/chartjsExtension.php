@@ -27,7 +27,6 @@ class chartjsExtension  extends AbstractExtension
 
     public function getFunctions()
     {
-
         return array(
               'chartjs_canvas' => new TwigFunction('chartjs_canvas', array($this, 'chartjs_canvas'),array('is_safe' => array('html'),'needs_environment' => true)),
               'getParameter' =>   new TwigFunction('parameter', function($name) {   return $this->container->getParameter($name); }),
@@ -35,9 +34,9 @@ class chartjsExtension  extends AbstractExtension
     }
 
     //we could define more than one map in a page
-    public function chartjs_canvas(Environment $twig,$id='myChart',$width='500px',$height='500px',$graphic)
+    public function chartjs_canvas(Environment $twig,$id='myChart',$width='500px',$height='500px',$graphic,$classes="")
     {
-        return $twig->render('@Chartjs/default/chartjsRender.html.twig',array('id' => $id,'width'=>$width,'height'=>$height,'graphic'=>$graphic));
+        return $twig->render('@Chartjs/default/chartjsRender.html.twig',array('id' => $id,'width'=>$width,'height'=>$height,'graphic'=>$graphic, "classes"=>$classes));
     }
 
 }
