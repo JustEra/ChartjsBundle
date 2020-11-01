@@ -1,5 +1,5 @@
 {
-  "name": "aldaflux/chartjs-bundle",
+  "name": "justera/chartjs-bundle",
   "type": "symfony-bundle",
   "description": "Chartjs integration in Symfony5",
   "keywords": ["Chartjs"],
